@@ -78,7 +78,7 @@ void RungeKutta<SolutionFieldType>::initExpression(const Expression& exp)
 }
 
 template<typename SolutionFieldType>
-__attribute__((no_sanitize("leak"))) void RungeKutta<SolutionFieldType>::initSUNContext()
+__attribute__((no_sanitize("address"))) void RungeKutta<SolutionFieldType>::initSUNContext()
 {
     if (!context_)
     {
